@@ -1,0 +1,7 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/denomlwr/socket.denontek.com.pk"
+PassengerBaseURI "/"
+PassengerNodejs "/home/denomlwr/nodevenv/socket.denontek.com.pk/10/bin/node"
+PassengerAppType node
+PassengerStartupFile src/index.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END

@@ -1,0 +1,275 @@
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at doWrite (_stream_writable.js:411:19)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Sender.sendFrame (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:390:20)
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+    at WebSocket.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:377:18)
+    at send (/home/denomlwr/socket.denontek.com.pk/src/index.js:110:6)
+    at WebSocketServer.wss.on (/home/denomlwr/socket.denontek.com.pk/src/index.js:56:5)
+    at WebSocketServer.emit (events.js:198:13)
+    at handleUpgrade (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocketServer.js:87:16)
+Emitted 'error' event at:
+    at WebSocket.finalize (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:182:41)
+    at Socket.emit (events.js:198:13)
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at onwriteError (_stream_writable.js:430:5)
+    at onwrite (_stream_writable.js:461:5)
+    at doWrite (_stream_writable.js:411:11)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    [... lines matching original stack trace ...]
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at doWrite (_stream_writable.js:411:19)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Sender.sendFrame (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:390:20)
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+    at WebSocket.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:377:18)
+    at send (/home/denomlwr/socket.denontek.com.pk/src/index.js:110:6)
+    at WebSocketServer.wss.on (/home/denomlwr/socket.denontek.com.pk/src/index.js:56:5)
+    at WebSocketServer.emit (events.js:198:13)
+    at handleUpgrade (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocketServer.js:87:16)
+Emitted 'error' event at:
+    at WebSocket.finalize (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:182:41)
+    at Socket.emit (events.js:198:13)
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at onwriteError (_stream_writable.js:430:5)
+    at onwrite (_stream_writable.js:461:5)
+    at doWrite (_stream_writable.js:411:11)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    [... lines matching original stack trace ...]
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at doWrite (_stream_writable.js:411:19)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Sender.sendFrame (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:390:20)
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+    at WebSocket.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:377:18)
+    at send (/home/denomlwr/socket.denontek.com.pk/src/index.js:110:6)
+    at WebSocketServer.wss.on (/home/denomlwr/socket.denontek.com.pk/src/index.js:56:5)
+    at WebSocketServer.emit (events.js:198:13)
+    at handleUpgrade (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocketServer.js:87:16)
+Emitted 'error' event at:
+    at WebSocket.finalize (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:182:41)
+    at Socket.emit (events.js:198:13)
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at onwriteError (_stream_writable.js:430:5)
+    at onwrite (_stream_writable.js:461:5)
+    at doWrite (_stream_writable.js:411:11)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    [... lines matching original stack trace ...]
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at doWrite (_stream_writable.js:411:19)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Sender.sendFrame (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:390:20)
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+    at WebSocket.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:377:18)
+    at send (/home/denomlwr/socket.denontek.com.pk/src/index.js:110:6)
+    at WebSocketServer.wss.on (/home/denomlwr/socket.denontek.com.pk/src/index.js:56:5)
+    at WebSocketServer.emit (events.js:198:13)
+    at handleUpgrade (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocketServer.js:87:16)
+Emitted 'error' event at:
+    at WebSocket.finalize (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:182:41)
+    at Socket.emit (events.js:198:13)
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at onwriteError (_stream_writable.js:430:5)
+    at onwrite (_stream_writable.js:461:5)
+    at doWrite (_stream_writable.js:411:11)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    [... lines matching original stack trace ...]
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at doWrite (_stream_writable.js:411:19)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Sender.sendFrame (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:390:20)
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+    at WebSocket.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:377:18)
+    at send (/home/denomlwr/socket.denontek.com.pk/src/index.js:110:6)
+    at WebSocketServer.wss.on (/home/denomlwr/socket.denontek.com.pk/src/index.js:56:5)
+    at WebSocketServer.emit (events.js:198:13)
+    at handleUpgrade (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocketServer.js:87:16)
+Emitted 'error' event at:
+    at WebSocket.finalize (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:182:41)
+    at Socket.emit (events.js:198:13)
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at onwriteError (_stream_writable.js:430:5)
+    at onwrite (_stream_writable.js:461:5)
+    at doWrite (_stream_writable.js:411:11)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    [... lines matching original stack trace ...]
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at doWrite (_stream_writable.js:411:19)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Sender.sendFrame (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:390:20)
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+    at WebSocket.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:377:18)
+    at send (/home/denomlwr/socket.denontek.com.pk/src/index.js:110:6)
+    at WebSocketServer.wss.on (/home/denomlwr/socket.denontek.com.pk/src/index.js:56:5)
+    at WebSocketServer.emit (events.js:198:13)
+    at handleUpgrade (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocketServer.js:87:16)
+Emitted 'error' event at:
+    at WebSocket.finalize (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:182:41)
+    at Socket.emit (events.js:198:13)
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at onwriteError (_stream_writable.js:430:5)
+    at onwrite (_stream_writable.js:461:5)
+    at doWrite (_stream_writable.js:411:11)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    [... lines matching original stack trace ...]
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at doWrite (_stream_writable.js:411:19)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Sender.sendFrame (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:390:20)
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+    at WebSocket.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:377:18)
+    at send (/home/denomlwr/socket.denontek.com.pk/src/index.js:110:6)
+    at WebSocketServer.wss.on (/home/denomlwr/socket.denontek.com.pk/src/index.js:56:5)
+    at WebSocketServer.emit (events.js:198:13)
+    at handleUpgrade (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocketServer.js:87:16)
+Emitted 'error' event at:
+    at WebSocket.finalize (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:182:41)
+    at Socket.emit (events.js:198:13)
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at onwriteError (_stream_writable.js:430:5)
+    at onwrite (_stream_writable.js:461:5)
+    at doWrite (_stream_writable.js:411:11)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    [... lines matching original stack trace ...]
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at doWrite (_stream_writable.js:411:19)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Sender.sendFrame (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:390:20)
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+    at WebSocket.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:377:18)
+    at send (/home/denomlwr/socket.denontek.com.pk/src/index.js:110:6)
+    at WebSocketServer.wss.on (/home/denomlwr/socket.denontek.com.pk/src/index.js:56:5)
+    at WebSocketServer.emit (events.js:198:13)
+    at handleUpgrade (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocketServer.js:87:16)
+Emitted 'error' event at:
+    at WebSocket.finalize (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:182:41)
+    at Socket.emit (events.js:198:13)
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at onwriteError (_stream_writable.js:430:5)
+    at onwrite (_stream_writable.js:461:5)
+    at doWrite (_stream_writable.js:411:11)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    [... lines matching original stack trace ...]
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at doWrite (_stream_writable.js:411:19)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Sender.sendFrame (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:390:20)
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+    at WebSocket.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:377:18)
+    at send (/home/denomlwr/socket.denontek.com.pk/src/index.js:110:6)
+    at WebSocketServer.wss.on (/home/denomlwr/socket.denontek.com.pk/src/index.js:56:5)
+    at WebSocketServer.emit (events.js:198:13)
+    at handleUpgrade (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocketServer.js:87:16)
+Emitted 'error' event at:
+    at WebSocket.finalize (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:182:41)
+    at Socket.emit (events.js:198:13)
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at onwriteError (_stream_writable.js:430:5)
+    at onwrite (_stream_writable.js:461:5)
+    at doWrite (_stream_writable.js:411:11)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    [... lines matching original stack trace ...]
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at doWrite (_stream_writable.js:411:19)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Sender.sendFrame (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:390:20)
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+    at WebSocket.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:377:18)
+    at send (/home/denomlwr/socket.denontek.com.pk/src/index.js:110:6)
+    at WebSocketServer.wss.on (/home/denomlwr/socket.denontek.com.pk/src/index.js:56:5)
+    at WebSocketServer.emit (events.js:198:13)
+    at handleUpgrade (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocketServer.js:87:16)
+Emitted 'error' event at:
+    at WebSocket.finalize (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:182:41)
+    at Socket.emit (events.js:198:13)
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at onwriteError (_stream_writable.js:430:5)
+    at onwrite (_stream_writable.js:461:5)
+    at doWrite (_stream_writable.js:411:11)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    [... lines matching original stack trace ...]
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at doWrite (_stream_writable.js:411:19)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Sender.sendFrame (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:390:20)
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
+    at WebSocket.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:377:18)
+    at send (/home/denomlwr/socket.denontek.com.pk/src/index.js:110:6)
+    at WebSocketServer.wss.on (/home/denomlwr/socket.denontek.com.pk/src/index.js:56:5)
+    at WebSocketServer.emit (events.js:198:13)
+    at handleUpgrade (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocketServer.js:87:16)
+Emitted 'error' event at:
+    at WebSocket.finalize (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/WebSocket.js:182:41)
+    at Socket.emit (events.js:198:13)
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at onwriteError (_stream_writable.js:430:5)
+    at onwrite (_stream_writable.js:461:5)
+    at doWrite (_stream_writable.js:411:11)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    [... lines matching original stack trace ...]
+    at Sender.send (/home/denomlwr/socket.denontek.com.pk/node_modules/ws/lib/Sender.js:312:12)
