@@ -67,7 +67,9 @@ wss.on('connection', (ws, req) => {
 
   ws.on('message', (message) => {
     if (verbose) log(`MSG from ${host}`, chalk.gray(message))
-    broadcast({ ws, channelId, message })
+    if(JSON.parse(message).type != 'ping') {
+      broadcast({ ws, channelId, message })
+    }
   })
 
   ws.on('error', (err) => {
