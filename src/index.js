@@ -67,8 +67,17 @@ wss.on('connection', (ws, req) => {
 
   ws.on('message', (message) => {
     if (verbose) log(`MSG from ${host}`, chalk.gray(message))
-    if(JSON.parse(message).type != 'ping') {
+    if(JSON.parse(message).type != 'ping' && JSON.parse(message).type != 'attendance') {
       broadcast({ ws, channelId, message })
+    }
+    if(JSON.parse(message).type == 'attendance') {
+      const apiUrl = 'http://school.denontek.com.pk/device/mark-attendance'; 
+      const params = {
+        mac_address: JSON.parse(message).mac_address,
+        rfid: JSON.parse(message).rfid
+      };
+      const queryString = new URLSearchParams(params).toString();
+      makeApiCall(apiUrl, queryString)
     }
   })
 
@@ -76,6 +85,22 @@ wss.on('connection', (ws, req) => {
     log(chalk.red('ERROR:'), err)
   })
 })
+
+function makeApiCall(apiUrl, queryString) {
+  fetch(`${apiUrl}?${queryString}`, {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+    }
+  })
+  .then(response => response.json()) // Parse the JSON response
+  .then(data => {
+    console.log('Success:', data); // Handle the data
+  })
+  .catch((error) => {
+    console.error('Error:', error); // Handle any errors
+  });
+}
 
 function getWss() {}
 
