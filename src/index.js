@@ -74,7 +74,8 @@ wss.on('connection', (ws, req) => {
       const apiUrl = 'http://school.denontek.com.pk/device/mark-attendance'; 
       const params = {
         mac_address: JSON.parse(message).mac_address,
-        rfid: JSON.parse(message).rfid
+        rfid: JSON.parse(message).rfid,
+        timestamp: JSON.parse(message).timestamp
       };
       const queryString = new URLSearchParams(params).toString();
       makeApiCall(apiUrl, queryString)
