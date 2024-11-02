@@ -66,18 +66,15 @@ wss.on('connection', (ws, req) => {
   }
 
   ws.on('message', (message) => {
+    const parsedMessage = JSON.parse(message);
     if (verbose) log(`MSG from ${host}`, chalk.gray(message))
-    if(JSON.parse(message).type != 'ping' && JSON.parse(message).type != 'attendance') {
+    if(parsedMessage.type != 'ping' && parsedMessage.type != 'onGetAttendance') {
       broadcast({ ws, channelId, message })
     }
-    if(JSON.parse(message).type == 'attendance') {
+    if(parsedMessage.type == 'onGetAttendance') {
       const apiUrl = 'http://school.denontek.com.pk/device/mark-attendance'; 
-      const params = {
-        mac_address: JSON.parse(message).mac_address,
-        rfid: JSON.parse(message).rfid,
-        timestamp: JSON.parse(message).timestamp
-      };
-      const queryString = new URLSearchParams(params).toString();
+      delete parsedMessage.type;
+      const queryString = new URLSearchParams(parsedMessage).toString();
       makeApiCall(apiUrl, queryString)
     }
   })
