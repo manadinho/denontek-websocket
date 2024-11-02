@@ -86,7 +86,7 @@ wss.on('connection', (ws, req) => {
 
 function makeApiCall(apiUrl, queryString) {
   fetch(`${apiUrl}?${queryString}`, {
-    method: 'GET',
+    method: 'POST',
     headers: {
         'Content-Type': 'application/json',
     }
