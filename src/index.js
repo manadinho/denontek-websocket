@@ -72,7 +72,7 @@ wss.on('connection', (ws, req) => {
       broadcast({ ws, channelId, message })
     }
     if(parsedMessage.type == 'onGetAttendance') {
-      const apiUrl = 'http://school.denontek.com.pk/device/mark-attendance'; 
+      const apiUrl = 'http://school.denontek.com.pk/device/mark-attendance-bulk'; 
       delete parsedMessage.type;
       const queryString = new URLSearchParams(parsedMessage).toString();
       makeApiCall(apiUrl, queryString)
