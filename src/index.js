@@ -68,15 +68,15 @@ wss.on('connection', (ws, req) => {
   ws.on('message', (message) => {
     const parsedMessage = JSON.parse(message);
     if (verbose) log(`MSG from ${host}`, chalk.gray(message))
-    if(parsedMessage.type != 'ping' && parsedMessage.type != 'onGetAttendance') {
+    if(parsedMessage.type != 'ping') {
       broadcast({ ws, channelId, message })
     }
-    if(parsedMessage.type == 'onGetAttendance') {
-      const apiUrl = 'http://school.denontek.com.pk/device/mark-attendance-bulk'; 
-      delete parsedMessage.type;
-      const queryString = new URLSearchParams(parsedMessage).toString();
-      makeApiCall(apiUrl, queryString)
-    }
+    // if(parsedMessage.type == 'onGetAttendance') {
+    //   const apiUrl = 'http://school.denontek.com.pk/device/mark-attendance-bulk'; 
+    //   delete parsedMessage.type;
+    //   const queryString = new URLSearchParams(parsedMessage).toString();
+    //   makeApiCall(apiUrl, queryString)
+    // }
   })
 
   ws.on('error', (err) => {
@@ -84,21 +84,21 @@ wss.on('connection', (ws, req) => {
   })
 })
 
-function makeApiCall(apiUrl, queryString) {
-  fetch(`${apiUrl}?${queryString}`, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    }
-  })
-  .then(response => response.json()) // Parse the JSON response
-  .then(data => {
-    console.log('Success:', data); // Handle the data
-  })
-  .catch((error) => {
-    console.error('Error:', error); // Handle any errors
-  });
-}
+// function makeApiCall(apiUrl, queryString) {
+//   fetch(`${apiUrl}?${queryString}`, {
+//     method: 'POST',
+//     headers: {
+//         'Content-Type': 'application/json',
+//     }
+//   })
+//   .then(response => response.json()) // Parse the JSON response
+//   .then(data => {
+//     console.log('Success:', data); // Handle the data
+//   })
+//   .catch((error) => {
+//     console.error('Error:', error); // Handle any errors
+//   });
+// }
 
 function getWss() {}
 
