@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+const { getRedis } = require('./redisClient');
 const https = require('https')
 const fs = require('fs')
 const WebSocket = require('ws')
@@ -19,6 +19,11 @@ clear()
 printii()
 cursor.hide()
 
+let redis;
+(async () => {
+  redis = await getRedis(); // connect once at startup
+})();
+
 // Create websocket server.
 if (cert && key) {
   // SSL.
@@ -32,7 +37,7 @@ if (cert && key) {
   server.listen(port, onListening)
 } else {
   // Non SSL.
-  wss = new WebSocket.Server({ port }, onListening)
+  wss = new WebSocket.Server({ host: '0.0.0.0',  port }, onListening);
 }
 
 // Will map clients to channels based on the URL path.
@@ -66,41 +71,29 @@ wss.on('connection', (ws, req) => {
   }
 
   ws.on('message', (message) => {
-    const parsedMessage = JSON.parse(message);
-    if (verbose) log(`MSG from ${host}`, chalk.gray(message))
-    if(parsedMessage.type != 'ping') {
+    let parsedMessage;
+    try {
+      parsedMessage = JSON.parse(message);
+    } catch (e) {
+      log('ERROR: Message is not valid JSON');
+      return
+    }
+
+    if (verbose) log(`MSG from ${host}`, chalk.gray(message));
+
+    if(parsedMessage.type == 'attendance') {
+      addAttendanceToRedis(parsedMessage);
+    }
+
+    if(!['ping', 'attendance'].includes(parsedMessage.type)) {
       broadcast({ ws, channelId, message })
     }
-    // if(parsedMessage.type == 'onGetAttendance') {
-    //   const apiUrl = 'http://school.denontek.com.pk/device/mark-attendance-bulk'; 
-    //   delete parsedMessage.type;
-    //   const queryString = new URLSearchParams(parsedMessage).toString();
-    //   makeApiCall(apiUrl, queryString)
-    // }
   })
 
   ws.on('error', (err) => {
     log(chalk.red('ERROR:'), err)
   })
-})
-
-// function makeApiCall(apiUrl, queryString) {
-//   fetch(`${apiUrl}?${queryString}`, {
-//     method: 'POST',
-//     headers: {
-//         'Content-Type': 'application/json',
-//     }
-//   })
-//   .then(response => response.json()) // Parse the JSON response
-//   .then(data => {
-//     console.log('Success:', data); // Handle the data
-//   })
-//   .catch((error) => {
-//     console.error('Error:', error); // Handle any errors
-//   });
-// }
-
-function getWss() {}
+});
 
 function onListening() {
   const noidMsg = identify ? '' : ` --${chalk.white('noid')}`
@@ -148,6 +141,27 @@ function log() {
 
   const ts = new Date().toISOString()
   console.log(`${chalk.dim(ts)}:`, ...arguments)
+}
+
+async function addAttendanceToRedis(attendance) {
+  await redis
+    .lPush(
+      `attendances`,
+      prepareAttendanceForRedis(attendance)
+    )
+    .catch(console.error);
+
+  // Read back from redis
+  // const recent = await redis.lRange(`attendances`, 0, 9); // latest 10
+  // console.log(`Recent attendances`, recent);
+}
+
+function prepareAttendanceForRedis(attendance) {
+  return JSON.stringify({
+    rfid: attendance.value,
+    timestamp: attendance.timestamp,
+    mac: attendance.mac_address
+  });
 }
 
 module.exports = {
