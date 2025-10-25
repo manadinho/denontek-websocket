@@ -82,7 +82,7 @@ wss.on('connection', (ws, req) => {
     if (verbose) log(`MSG from ${host}`, chalk.gray(message));
 
     if(parsedMessage.type == 'attendance') {
-      addAttendanceToRedis(parsedMessage);
+      addAttendanceToRedis(parsedMessage, channelId);
     }
 
     if(!['ping', 'attendance'].includes(parsedMessage.type)) {
@@ -143,11 +143,11 @@ function log() {
   console.log(`${chalk.dim(ts)}:`, ...arguments)
 }
 
-async function addAttendanceToRedis(attendance) {
+async function addAttendanceToRedis(attendance, channelId) {
   await redis
     .lPush(
       `attendances`,
-      prepareAttendanceForRedis(attendance)
+      prepareAttendanceForRedis(attendance, channelId)
     )
     .catch(console.error);
 
@@ -156,11 +156,12 @@ async function addAttendanceToRedis(attendance) {
   // console.log(`Recent attendances`, recent);
 }
 
-function prepareAttendanceForRedis(attendance) {
+function prepareAttendanceForRedis(attendance, channelId) {
   return JSON.stringify({
     rfid: attendance.value,
     timestamp: attendance.timestamp,
-    mac: attendance.mac_address
+    mac: attendance.mac_address,
+    channelId: channelId
   });
 }
 
